@@ -1,7 +1,9 @@
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
+import stitchesGlobal from '../styles/stitches.global';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  stitchesGlobal();
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
