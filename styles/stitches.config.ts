@@ -1,5 +1,7 @@
 import { createStitches } from '@stitches/react';
 
+const pixelToRem = (px: number) => px / 16;
+
 export const { getCssText, styled } = createStitches({
   theme: {
     colors: {
@@ -12,24 +14,14 @@ export const { getCssText, styled } = createStitches({
       red: '#df0000',
     },
     fontSizes: {
-      '12px': 'calc(12rem/ 16)',
-      '13px': 'calc(13rem / 16)',
-      '14px': 'calc(14rem / 16)',
-      '16px': 'calc(16rem / 16)',
-      '18px': 'calc(18rem / 16)',
-      '24px': 'calc(24rem / 16)',
-      '28px': 'calc(28rem / 16)',
-      '36px': 'calc(36rem / 16)',
-      // ---
-      smallText: '$12px',
-      articleDate: '$13px',
-      footerMenu: '$14px',
-      topics: '$16px',
-      topicM: '$20px',
-      label: '$16px',
-      description: '$16px',
-      titleS: '$18px',
-      titleM: '$24px',
+      '12px': `${pixelToRem(12)}rem`,
+      '13px': `${pixelToRem(13)}rem`,
+      '14px': `${pixelToRem(14)}rem`,
+      '16px': `${pixelToRem(16)}rem`,
+      '18px': `${pixelToRem(18)}rem`,
+      '24px': `${pixelToRem(24)}rem`,
+      '28px': `${pixelToRem(28)}rem`,
+      '36px': `${pixelToRem(36)}rem`,
     },
   },
   media: {
