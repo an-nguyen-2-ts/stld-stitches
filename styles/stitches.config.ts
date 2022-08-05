@@ -3,7 +3,7 @@ import utils from './stitches.utils';
 
 const pixelToRem = (px: number) => px / 16;
 
-export const { getCssText, styled } = createStitches({
+export const { getCssText, styled, createTheme, theme, globalCss } = createStitches({
   theme: {
     colors: {
       primary: '#fbc500',
@@ -24,10 +24,13 @@ export const { getCssText, styled } = createStitches({
       '28px': `${pixelToRem(28)}rem`,
       '36px': `${pixelToRem(36)}rem`,
     },
+    fonts: {
+      defaultBody: 'SVN-Gilroy',
+    },
     fontWeights: {
       normal: '400',
       semiBold: '500',
-      bold: '600',
+      bold: '700',
     },
     space: {
       small: `${pixelToRem(5)}rem`,
