@@ -16,6 +16,9 @@ export default globalCss({
     '-webkit-font-smoothing': 'antialiased',
     '-moz-osx-font-smoothing': 'grayscale',
   },
+  'button, a': {
+    cursor: 'pointer',
+  },
   '@font-face': [
     {
       fontFamily: '$defaultBody',

@@ -51,3 +51,15 @@ export const { getCssText, styled, createTheme, theme, globalCss } = createStitc
   },
   utils,
 });
+
+export const dark = createTheme({
+  colors: {
+    primary: '#0066b3',
+    secondary: '#3575f0',
+    link: '#0066b3',
+    text: '#fff',
+    white: '#000',
+    gray: '#868686',
+    red: '#d20000',
+  },
+});

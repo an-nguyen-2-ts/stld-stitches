@@ -5,7 +5,7 @@ const Container = styled('div', {
   maxWidth: '500px',
   width: '100%',
   margin: '20px auto',
-  border: '1px solid $gray',
+  border: '1px solid $primary',
   height: 'calc(100vh - 40px)',
   display: 'flex',
   flexDirection: 'column',
@@ -33,7 +33,7 @@ const Button = styled('button', {
   display: 'block',
   cursor: 'pointer',
   mt: '10px',
-  ml: '20px',
+  mx: '20px',
 
   '@pd480': {
     fontSize: '$16px',
@@ -69,11 +69,12 @@ const ButtonInherit = styled(ButtonVariant, {
     transition: '0.2s ease',
     background: '$text',
     color: '$white',
+    borderColor: '$white',
   },
 });
 
 const Text = styled('p', {
-  color: '$text',
+  color: '$primary',
 });
 
 const Home: NextPage = () => {
