@@ -7,7 +7,7 @@ export const { getCssText, styled } = createStitches({
     colors: {
       primary: '#fbc500',
       secondary: '#f08200',
-      link: '#f15a22',
+      link: '#005993',
       text: '#1b1b1b',
       white: '#ffffff',
       gray: '#6b6b6b',
@@ -23,6 +23,21 @@ export const { getCssText, styled } = createStitches({
       '28px': `${pixelToRem(28)}rem`,
       '36px': `${pixelToRem(36)}rem`,
     },
+    fontWeights: {
+      normal: '400',
+      semiBold: '500',
+      bold: '600',
+    },
+    space: {
+      xxs: `${pixelToRem(5)}rem`,
+      xs: `${pixelToRem(10)}rem`,
+      sm: `${pixelToRem(15)}rem`,
+    },
+    sizes: {
+      '1px': '1px',
+      '3px': '3px',
+      '5px': '5px',
+    },
   },
   media: {
     pd480: '(min-width: 480px)',
@@ -31,8 +46,29 @@ export const { getCssText, styled } = createStitches({
     pd1200: '(min-width: 1024px)',
   },
   utils: {
+    // Abbreviated margin properties
     m: (value: string | number) => ({
       margin: value,
+    }),
+    mt: (value: string | number) => ({
+      marginTop: value,
+    }),
+    mr: (value: string | number) => ({
+      marginRight: value,
+    }),
+    mb: (value: string | number) => ({
+      marginBottom: value,
+    }),
+    ml: (value: string | number) => ({
+      marginLeft: value,
+    }),
+    mx: (value: string | number) => ({
+      marginLeft: value,
+      marginRight: value,
+    }),
+    my: (value: string | number) => ({
+      marginTop: value,
+      marginBottom: value,
     }),
   },
 });
