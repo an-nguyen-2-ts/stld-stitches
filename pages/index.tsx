@@ -90,6 +90,17 @@ const Home: NextPage = () => {
       <br />
 
       <ButtonInherit pureMargin>Inherit Variant Button</ButtonInherit>
+
+      <Text
+        css={{
+          color: '$secondary',
+          m: '$large',
+          border: '1px solid $primary',
+          padding: '$medium',
+        }}
+      >
+        this test using `css` props, with utils, variants
+      </Text>
     </Container>
   );
 };
