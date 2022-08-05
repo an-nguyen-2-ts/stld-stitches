@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { styled } from '../styles/stitches.config';
 
-const Wrapper = styled('div', {
+const Container = styled('div', {
   maxWidth: '500px',
   width: '100%',
   margin: '20px auto',
@@ -9,6 +9,20 @@ const Wrapper = styled('div', {
   height: 'calc(100vh - 40px)',
   display: 'flex',
   flexDirection: 'column',
+
+  variants: {
+    size: {
+      1: {
+        maxWidth: '300px',
+      },
+      2: {
+        maxWidth: '585px',
+      },
+      3: {
+        maxWidth: '865px',
+      },
+    },
+  },
 });
 
 const Button = styled('button', {
@@ -25,20 +39,11 @@ const Button = styled('button', {
     fontSize: '$16px',
     background: '$secondary',
   },
-
-  variants: {
-    pureMargin: {
-      true: {
-        marginTop: '$15px',
-        height: '$size$adu',
-      },
-    },
-  },
 });
 
 const ButtonVariant = styled('button', {
   background: '$link',
-  padding: '$sm $xs',
+  padding: '$large',
   fontSize: '$12px',
   color: '$white',
   display: 'block',
@@ -48,7 +53,7 @@ const ButtonVariant = styled('button', {
   variants: {
     pureMargin: {
       true: {
-        margin: '$sm $xs',
+        margin: '0 $large',
       },
     },
   },
@@ -67,9 +72,15 @@ const ButtonInherit = styled(ButtonVariant, {
   },
 });
 
+const Text = styled('p', {
+  color: '$text',
+});
+
 const Home: NextPage = () => {
   return (
-    <Wrapper>
+    <Container size={{ '@initial': '1', '@pd640': '2' }}>
+      <Text>Hello Stitches demo</Text>
+
       <Button>RESPONSIVE BUTTON</Button>
 
       <br />
@@ -79,7 +90,7 @@ const Home: NextPage = () => {
       <br />
 
       <ButtonInherit pureMargin>Inherit Variant Button</ButtonInherit>
-    </Wrapper>
+    </Container>
   );
 };
 
