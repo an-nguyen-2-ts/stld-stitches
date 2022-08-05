@@ -1,5 +1,5 @@
-import type * as Stitches from '@stitches/react';
 import { createStitches } from '@stitches/react';
+import utils from './stitches.utils';
 
 const pixelToRem = (px: number) => px / 16;
 
@@ -46,30 +46,5 @@ export const { getCssText, styled } = createStitches({
     pd768: '(min-width: 768px)',
     pd1200: '(min-width: 1024px)',
   },
-  utils: {
-    // Abbreviated margin properties
-    m: (value: Stitches.PropertyValue<'margin'>) => ({
-      margin: value,
-    }),
-    mt: (value: Stitches.PropertyValue<'margin'>) => ({
-      marginTop: value,
-    }),
-    mr: (value: Stitches.PropertyValue<'margin'>) => ({
-      marginRight: value,
-    }),
-    mb: (value: Stitches.PropertyValue<'margin'>) => ({
-      marginBottom: value,
-    }),
-    ml: (value: Stitches.PropertyValue<'margin'>) => ({
-      marginLeft: value,
-    }),
-    mx: (value: Stitches.PropertyValue<'margin'>) => ({
-      marginLeft: value,
-      marginRight: value,
-    }),
-    my: (value: Stitches.PropertyValue<'margin'>) => ({
-      marginTop: value,
-      marginBottom: value,
-    }),
-  },
+  utils,
 });
