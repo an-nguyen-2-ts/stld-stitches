@@ -1,3 +1,4 @@
+import type * as Stitches from '@stitches/react';
 import { createStitches } from '@stitches/react';
 
 const pixelToRem = (px: number) => px / 16;
@@ -29,14 +30,14 @@ export const { getCssText, styled } = createStitches({
       bold: '600',
     },
     space: {
-      xxs: `${pixelToRem(5)}rem`,
-      xs: `${pixelToRem(10)}rem`,
-      sm: `${pixelToRem(15)}rem`,
+      small: `${pixelToRem(5)}rem`,
+      medium: `${pixelToRem(10)}rem`,
+      large: `${pixelToRem(15)}rem`,
     },
     sizes: {
-      '1px': '1px',
-      '3px': '3px',
-      '5px': '5px',
+      xxs: '1px',
+      xs: '3px',
+      sm: '5px',
     },
   },
   media: {
@@ -47,26 +48,26 @@ export const { getCssText, styled } = createStitches({
   },
   utils: {
     // Abbreviated margin properties
-    m: (value: string | number) => ({
+    m: (value: Stitches.PropertyValue<'margin'>) => ({
       margin: value,
     }),
-    mt: (value: string | number) => ({
+    mt: (value: Stitches.PropertyValue<'margin'>) => ({
       marginTop: value,
     }),
-    mr: (value: string | number) => ({
+    mr: (value: Stitches.PropertyValue<'margin'>) => ({
       marginRight: value,
     }),
-    mb: (value: string | number) => ({
+    mb: (value: Stitches.PropertyValue<'margin'>) => ({
       marginBottom: value,
     }),
-    ml: (value: string | number) => ({
+    ml: (value: Stitches.PropertyValue<'margin'>) => ({
       marginLeft: value,
     }),
-    mx: (value: string | number) => ({
+    mx: (value: Stitches.PropertyValue<'margin'>) => ({
       marginLeft: value,
       marginRight: value,
     }),
-    my: (value: string | number) => ({
+    my: (value: Stitches.PropertyValue<'margin'>) => ({
       marginTop: value,
       marginBottom: value,
     }),
